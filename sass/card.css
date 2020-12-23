@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
+@keyframes heartbeat {
+  0% {
+    opacity: 0;
+    transform: scale(1) rotate(0deg);
+  }
+  40% {
+    opacity: 0.7;
+    transform: scale(1.5);
+    transform: scaleX(1.4) rotate 150deg;
+  }
+  80% {
+    opacity: 0.9;
+    transform: scale(1.25) rotate(220deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate();
+  }
+}
+@keyframes rotheart {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  40% {
+    transform: scale(1.5);
+    transform: scaleX(1.05) rotate(90deg);
+  }
+  80% {
+    transform: scale(1.8) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate();
+  }
+}
+body {
+  max-width: 100%;
+  background: linear-gradient(#58cfe4, #00ff4c);
+}
+
+.heart {
+  position: relative;
+  box-sizing: border-box;
+  margin-left: 30%;
+  width: 80px;
+  height: 80px;
+}
+.heart .fa-heart {
+  position: absolute;
+  background: #00ff4c;
+  font-size: 3rem;
+  color: #fa79da;
+  border-radius: 50px;
+  width: 50px;
+  height: 70px;
+  text-align: center;
+  transform: translateX(70px);
+}
+.heart .fa-gradient {
+  font-weight: bold;
+  -moz-animation: heartbeat 3s 200ms forwards infinite ease-in;
+  -webkit-animation: heartbeat 3s 200ms forwards infinite ease-in;
+  animation: heartbeat 3s 200ms forwards infinite ease-in;
+  background: linear-gradient(#9356dc, #fa79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heart1 {
+  position: relative;
+  box-sizing: border-box;
+  margin-left: 30%;
+  width: 80px;
+  height: 80px;
+}
+.heart1 .fa-heart {
+  position: absolute;
+  background: #00ff4c;
+  font-size: 3rem;
+  color: red;
+  border-radius: 50px;
+  width: 50px;
+  height: 70px;
+  text-align: center;
+  transform: translateX(-70px);
+}
+.heart1 .fa-gradient1 {
+  font-weight: bold;
+  -moz-animation: rotheart 3s 100ms backwards infinite ease-in;
+  -webkit-animation: rotheart 3s 100ms backwards infinite ease-in;
+  animation: rotheart 3s 100ms backwards infinite ease-in;
+  background: red;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  height: 50%;
+  margin: 50% 0 0 3%;
+  background: linear-gradient(#9356dc, #fa79da);
+  padding-left: 5%;
+  border-radius: 0px 110px 25px 30px;
+}
+
+.kids {
+  height: 200px;
+  width: 200px;
+  border-radius: 25px 30px 0px 110px;
+  margin-left: 40%;
+}
+
+.us {
+  height: 200px;
+  width: 200px;
+  border-radius: 25px 30px 0px 110px;
+}
+
+h1, h2 {
+  font-family: "Love Ya Like A Sister", cursive;
+  color: white;
+}
+
+/*# sourceMappingURL=card.css.map */
