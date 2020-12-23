@@ -33,12 +33,6 @@
     transform: scale(1) rotate();
   }
 }
-body {
-  border: solid 1px;
-  max-width: 100%;
-  background: linear-gradient(#58cfe4, #00ff4c);
-}
-
 @keyframes myfirst {
   0% {
     background-color: #9356dc;
@@ -93,6 +87,73 @@ body {
     top: 0px;
   }
 }
+@keyframes myfirst3 {
+  0% {
+    background-color: #9356dc;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 0px;
+    top: -75px;
+  }
+  50% {
+    background-color: #fa79da;
+    left: 75px;
+    top: -75px;
+  }
+  75% {
+    background-color: green;
+    left: 75px;
+    top: 0px;
+  }
+  100% {
+    background-color: #9356dc;
+    left: 0px;
+    top: 0px;
+  }
+}
+@keyframes image {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-45deg);
+  }
+  80% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes beat {
+  0% {
+    transform: scale(0.75);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body {
+  max-width: 100%;
+  background: linear-gradient(#15363b, #4bc0d8);
+  margin: 0;
+}
+
 .heart {
   position: relative;
   box-sizing: border-box;
@@ -171,9 +232,7 @@ body {
 }
 .heart2 .fa-gradient2 {
   font-weight: bold;
-  -moz-animation: rotheart 3s 100ms backwards infinite ease-in;
-  -webkit-animation: rotheart 3s 100ms backwards infinite ease-in;
-  animation: rotheart 3s 100ms backwards infinite ease-in;
+  animation: myfirst linear 3s infinite;
   background: red;
   -webkit-background-clip: text;
   background-clip: text;
@@ -200,9 +259,7 @@ body {
 }
 .heart3 .fa-gradient3 {
   font-weight: bold;
-  -moz-animation: rotheart 3s 100ms backwards infinite ease-in;
-  -webkit-animation: rotheart 3s 100ms backwards infinite ease-in;
-  animation: rotheart 3s 100ms backwards infinite ease-in;
+  animation: myfirst3 3s linear infinite;
   background: red;
   -webkit-background-clip: text;
   background-clip: text;
@@ -210,7 +267,6 @@ body {
 }
 
 .container {
-  border: solid 1px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -220,21 +276,23 @@ body {
   margin: 15% 0 0 3%;
   background: linear-gradient(#9356dc, #fa79da);
   padding-left: 5%;
-  border-radius: 0px 110px 25px 30px;
+  border-radius: 110px 110px 110px 110px;
 }
 
 .kids {
   height: 200px;
   width: 200px;
   border-radius: 25px 30px 0px 110px;
-  float: right;
-  margin-right: 2%;
+  align-items: center;
+  animation: image 8s backwards infinite alternate;
+  margin-bottom: 5%;
 }
 
 .us {
   height: 200px;
   width: 200px;
   border-radius: 25px 30px 0px 110px;
+  animation: beat 5s linear infinite;
 }
 
 .card-text {

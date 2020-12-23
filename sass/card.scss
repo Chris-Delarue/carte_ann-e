@@ -4,7 +4,7 @@ $color-secondary:#fa79da;
 $color-primary:#9356dc;
 
 $color-heart:linear-gradient( $color-primary , $color-secondary);
-$color-body: linear-gradient( rgb(88, 207, 228), rgb(0, 255, 76));
+$color-body: linear-gradient( rgb(21, 54, 59), rgb(75,192,216));
 
 @keyframes rotheart1{
     0%{
@@ -38,11 +38,7 @@ $color-body: linear-gradient( rgb(88, 207, 228), rgb(0, 255, 76));
     transform:scale(1) rotate() ;
   }
 }
-  body{
-    border: solid 1px;
-    max-width:100%;
-    background: $color-body;
-  }
+ 
    @keyframes myfirst {
     0%   {background-color:$color-primary; left:0px; top:0px;}
     25%  {background-color:yellow; left:150px; top:0px;}
@@ -56,6 +52,53 @@ $color-body: linear-gradient( rgb(88, 207, 228), rgb(0, 255, 76));
     50%  {background-color:$color-secondary; left:150px; top:150px;}
     75%  {background-color:green; left:150px; top:0px;}
     100% {background-color:$color-primary; left:0px; top:0px;}
+  }
+  @keyframes myfirst3 {
+    0%   {background-color:$color-primary; left:0px; top:0px;}
+    25%  {background-color:yellow; left:0px; top:-75px;}
+    50%  {background-color:$color-secondary; left:75px; top:-75px;}
+    75%  {background-color:green; left:75px; top:0px;}
+    100% {background-color:$color-primary; left:0px; top:0px;}
+  }
+  @keyframes image{
+    0%{
+      transform:rotate(0deg);
+    }
+    40%{
+      transform:rotate(-45deg);
+    }
+    80%{
+      transform:rotate(-180deg);
+    }
+    100%{
+      transform:rotate(-360deg);
+    }
+
+  }
+  @keyframes beat{
+    0%{
+      transform: scale(.75);
+    }
+    20%{
+      transform: scale(1);
+    }
+    40%{
+      transform:scale(.75);
+    }
+    60%{
+      transform:scale(1);
+      }
+    80%{
+      transform:scale(.75);
+    }
+    100%{
+      transform:scale(1);
+    }
+  } 
+  body{
+    max-width:100%;
+    background: $color-body;
+    margin:0;
   }
 .heart{ 
     position:relative;
@@ -135,9 +178,8 @@ $color-body: linear-gradient( rgb(88, 207, 228), rgb(0, 255, 76));
     }
     & .fa-gradient2{
       font-weight:bold;
-      -moz-animation:rotheart 3s  100ms backwards infinite ease-in;
-      -webkit-animation:rotheart  3s 100ms backwards infinite ease-in;
-      animation: rotheart 3s 100ms backwards infinite ease-in;
+      animation: myfirst linear 3s infinite;
+     
       background:red;
       -webkit-background-clip: text;
       background-clip: text;
@@ -164,9 +206,7 @@ $color-body: linear-gradient( rgb(88, 207, 228), rgb(0, 255, 76));
     }
     & .fa-gradient3{
       font-weight:bold;
-      -moz-animation:rotheart 3s  100ms backwards infinite ease-in;
-      -webkit-animation:rotheart  3s 100ms backwards infinite ease-in;
-      animation: rotheart 3s 100ms backwards infinite ease-in;
+      animation: myfirst3 3s linear infinite;
       background:red;
       -webkit-background-clip: text;
       background-clip: text;
@@ -175,7 +215,6 @@ $color-body: linear-gradient( rgb(88, 207, 228), rgb(0, 255, 76));
   }
 
 .container{
-    border:solid 1px;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -185,20 +224,24 @@ $color-body: linear-gradient( rgb(88, 207, 228), rgb(0, 255, 76));
     margin:15% 0 0 3%;
     background: $color-heart;
     padding-left:5%;
-    border-radius: 0px 110px 25px 30px;
+    border-radius: 110px 110px 110px 110px;
 }
 .kids{
     height:200px;
     width:200px;
     border-radius:25px 30px 0px 110px;
-    float:right;
-    margin-right:2%;
+    align-items: center;
+    animation: image 8s backwards infinite alternate ;
+    margin-bottom:5%;
+
 } 
 
 .us{
     height:200px;
     width:200px;
     border-radius:25px 30px 0px 110px;
+    animation:beat 5s linear infinite;
+   
 }
 .card-text{
   text-align: center;
@@ -206,7 +249,8 @@ $color-body: linear-gradient( rgb(88, 207, 228), rgb(0, 255, 76));
     font-family:'Love Ya Like A Sister', cursive;
     color:white;
     border-radius:50px;
-    position: relative;
+    position:relative;
+
   }
   h1{
     width: 50%;
